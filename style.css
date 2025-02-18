@@ -1,0 +1,102 @@
+/* Body and overall styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  h2.form-title {
+    text-align: center;
+    color: #4CAF50;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"], select, input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #studentImageSection {
+    margin-top: 20px;
+  }
+  
+  #uploadedFiles {
+    margin-top: 10px;
+  }
+  
+  #uploadedFiles img {
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  #footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Animation for form fields */
+  input, select, button {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

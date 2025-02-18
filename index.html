@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Data Entry Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.jpg" alt="School Logo" class="logo">
+    </header>
+
+    <h2 class="form-title">Details needed for apply !! </h2>
+
+    <form id="studentForm" class="form">
+      <!-- Existing form fields -->
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" required>
+      </div>
+      <div class="form-group">
+        <label for="fatherName">Student Father's Name</label>
+        <input type="text" id="fatherName" required>
+      </div>
+      <div class="form-group">
+        <label for="fatherCnic">Student Father CNIC</label>
+        <input type="text" id="fatherCnic" required>
+      </div>
+      <div class="form-group">
+        <label for="motherName">Student Mother's Name</label>
+        <input type="text" id="motherName" required>
+      </div>
+      <div class="form-group">
+        <label for="motherCnic">Student Mother CNIC</label>
+        <input type="text" id="motherCnic" required>
+      </div>
+      <div class="form-group">
+        <label for="schoolName">Student School Name</label>
+        <input type="text" id="schoolName" required>
+      </div>
+      <div class="form-group">
+        <label for="headmasterName">Student Headmaster Name</label>
+        <input type="text" id="headmasterName" required>
+      </div>
+      <div class="form-group">
+        <label for="headmasterContact">Student Headmaster Contact</label>
+        <input type="text" id="headmasterContact" required>
+      </div>
+      <div class="form-group">
+        <label for="studyingClass">Student Studying Class</label>
+        <input type="text" id="studyingClass" required>
+      </div>
+      <div class="form-group">
+        <label for="grNumber">Student GR Number</label>
+        <input type="text" id="grNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="schoolSemisCode">School SEMIS Code</label>
+        <input type="text" id="schoolSemisCode" required>
+      </div>
+      <div class="form-group">
+        <label for="yearOfAdmission">Year of Admission</label>
+        <input type="text" id="yearOfAdmission" required>
+      </div>
+      <div class="form-group">
+        <label for="districtName">District Name</label>
+        <input type="text" id="districtName" required>
+      </div>
+      <div class="form-group">
+        <label for="classToApply">Class to Apply (7-12)</label>
+        <select id="classToApply" required>
+          <option value="7">7th</option>
+          <option value="8">8th</option>
+          <option value="9">9th</option>
+          <option value="10">10th</option>
+          <option value="11">11th</option>
+          <option value="12">12th</option>
+        </select>
+      </div>
+
+      <!-- Test District with Sindh districts -->
+      <div class="form-group">
+        <label for="testDistrict">Test District</label>
+        <select id="testDistrict" required>
+          <option value="Karachi">Karachi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Sukkur">Sukkur</option>
+          <option value="Larkana">Larkana</option>
+          <option value="Mirpurkhas">Mirpurkhas</option>
+          <option value="Nawabshah">Nawabshah</option>
+          <option value="Dadu">Dadu</option>
+          <option value="Badin">Badin</option>
+          <option value="Thatta">Thatta</option>
+          <option value="Shikarpur">Shikarpur</option>
+          <option value="Khairpur">Khairpur</option>
+          <option value="Jacobabad">Jacobabad</option>
+          <option value="Umerkot">Umerkot</option>
+          <option value="Jamshoro">Jamshoro</option>
+          <option value="Tando Allahyar">Tando Allahyar</option>
+        </select>
+      </div>
+
+      <!-- Domicile upload -->
+      <div class="form-group">
+        <label for="domicile">Upload Domicile</label>
+        <input type="file" id="domicile" accept="image/*" required>
+      </div>
+
+      <!-- Passport Photo, B-form, etc. -->
+      <div class="form-group">
+        <label for="passportPhoto">Passport Photograph</label>
+        <input type="file" id="passportPhoto" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="bForm">B-form / Birth Certificate</label>
+        <input type="file" id="bForm" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="fatherCnicFront">Father CNIC (Front Side)</label>
+        <input type="file" id="fatherCnicFront" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="fatherCnicBack">Father CNIC (Back Side)</label>
+        <input type="file" id="fatherCnicBack" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="motherCnicFront">Mother CNIC (Front Side)</label>
+        <input type="file" id="motherCnicFront" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label for="motherCnicBack">Mother CNIC (Back Side)</label>
+        <input type="file" id="motherCnicBack" accept="image/*" required>
+      </div>
+
+      <button type="button" id="generateForm" class="generate-btn">Generate Form</button>
+    </form>
+
+    <div id="studentImageSection" class="student-image-section" style="display: none;">
+      <h3>Student Information</h3>
+      <div id="imagePreview"></div>
+      <div id="studentDetails"></div>
+
+      <!-- Display Uploaded Files -->
+      <h4>Uploaded Files</h4>
+      <div id="uploadedFiles"></div>
+
+      <!-- PDF Download Button -->
+      <button type="button" id="downloadPdf" class="download-btn" style="display: none;">Download PDF</button>
+    </div>
+
+    <div id="footer">
+      <p>&copy; 2025 NJV School Karachi -Suhail Ahmed Aamro</p>
+      
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
